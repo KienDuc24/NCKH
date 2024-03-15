@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" href="layout_style.css">
+    <link rel="icon" href="./img/logo.png" type = "image/x-icon">   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="./img/logo.png">
+</head>
+<body>
+
+    <div class="nav_menu" id="nav">
+        <a href="./index.html"><img src="./img/logo.png" style="height: 64px;"></a>
+        <a href="#" class="nav-item nav-item_link is-active" active-color="orange">Giới thiệu</a>
+        <a href="#" class="nav-item nav-item_link" active-color="green">Từ điển</a>
+        <a href="#" class="nav-item nav-item_link" active-color="blue">Phương pháp</a>
+        <a href="#" class="nav-item nav-item_link" active-color="red">Upload</a>
+        <a href="#" class="nav-item nav-item_link" active-color="rebeccapurple">UAV</a>
+        <span class="nav-indicator"></span>
+
+        <a class="nav-item search" id="search_div" >
+            <div class="search d-flex">
+                <input type="text" placeholder="Tìm kiếm" id="search_input">
+                <i class="fa-solid fa-magnifying-glass" onclick="performSearch()" id = "search_icon"></i>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="scroll">
+        <img src="./img/up.png" onclick="up()" class="up" alt="" srcset="">
+        
+    </div>
+
+    <div class="content">
+        
+    </div>
+
+    
+    <script src="main.js"></script>
+</body>
+</html>
