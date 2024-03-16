@@ -1,7 +1,9 @@
 "use strict";
 
+var current = ""; 
 var indicator = document.querySelector('.nav-indicator');
 var items = document.querySelectorAll('.nav-item_link');
+
 
 function handleIndicator(el) {
   items.forEach(function (item) {
@@ -19,6 +21,9 @@ function handleIndicator(el) {
 items.forEach(function (item, index) {
   item.addEventListener('click', function (e) {
     handleIndicator(e.target);
+    var currentElement = document.getElementsByClassName("is-active")[0];
+    current = currentElement.id; // Gán giá trị cho biến current
+    gopage(); // Gọi hàm gopage() sau khi đã có giá trị cho current
   });
   item.classList.contains('is-active') && handleIndicator(item);
 });
@@ -111,4 +116,30 @@ function performSearch() {
   if (inputValue.trim() !== "" && searchInput.style.display == "inline") {
     window.alert("chuyển tới trang tìm kiếm");
   }
+}
+
+var titlename = "Trang chủ"; 
+
+function gopage() {
+  var contentsrcElement = document.getElementById("contentsrc");
+  contentsrcElement.src = "../function/" + current + ".html";
+  if (current === "homepage") {
+    titlename = "Trang chủ"; 
+  }
+  if (current === "aboutus") {
+    titlename = "Giới thiệu"; 
+  }
+  if (current === "dictionary") {
+    titlename = "Từ điển"; 
+  }
+  if (current === "measure") {
+    titlename = "Phương pháp"; 
+  }
+  if (current === "upload") {
+    titlename = "Tải lên"; 
+  }
+  if (current === "uav") {
+    titlename = "UAV"; 
+  }
+  document.title = titlename; 
 }

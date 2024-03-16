@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="layout_style.css">
+    <link rel="icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        .iframe-container {
+            top: 64px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;            
+        }
+
+        .content{
+            height: calc(100vh - 64px);
+            margin-top: 64px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav_menu" id="nav">
+        <img src="../img/logo.png" style="height: 64px;">
+        <p class="nav-item nav-item_link is-active" id="homepage" active-color="rebeccapurple" onclick="gopage()">Trang chủ</p>
+        <p class="nav-item nav-item_link" id="aboutus"active-color="orange" onclick="gopage()">Giới thiệu</p>
+        <p class="nav-item nav-item_link" id="dictionary"active-color="red"onclick="gopage()">Từ điển</p>
+        <p class="nav-item nav-item_link" id="measure"active-color="blue" onclick="gopage()">Phương pháp</p>
+        <p class="nav-item nav-item_link" id="upload"active-color="green" onclick="gopage()">Tải lên</p>
+        <p class="nav-item nav-item_link" id="uav"active-color="pink" onclick="gopage()">UAV</p>
+        <span class="nav-indicator"></span>
+
+        <a class="nav-item search" id="search_div" >
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm" id="search_input">
+                <i class="fa-solid fa-magnifying-glass" onclick="performSearch()" id = "search_icon"></i>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="scroll">
+        <img src="../img/up.png" onclick="up()" class="up" alt="" srcset="">
+        
+    </div>
+
+    <div class="iframe-container content">
+        <iframe id="contentsrc" src="../function/upload.html" frameborder="0"></iframe>
+    </div>
+    
+    <script src="layout.js"></script>
+</body>
+</html>
+
+
+
+"../homepage.html"
+"../function/homepage.html"
+"../function/auboutus.html"
+"../function/dictionary.html
+"../function/measure.html"
+"../function/upload.html"
+"../function/uav.html"
