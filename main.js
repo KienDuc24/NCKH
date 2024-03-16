@@ -93,7 +93,7 @@ async function secondStatement() {
     var targetElement = event.target;
 
     // Kiểm tra nếu không phải là searchInput hoặc là một phần tử con của searchInput
-    if (targetElement !== searchDiv && !searchDiv.contains(targetElement)) {
+    if (targetElement !== searchDiv && !searchDiv.contains(targetElement) && inputValue.trim() === "") {
       searchInput.classList.remove("show"); // Xóa class "show" để thu hẹp search input
 
       setTimeout(function() {
@@ -108,7 +108,7 @@ function performSearch() {
   searchInput.addEventListener("input", function(event) {
     inputValue = event.target.value;
   });
-  if (inputValue !== "" && searchInput.style.display == "inline") {
+  if (inputValue.trim() !== "" && searchInput.style.display == "inline") {
     window.alert("chuyển tới trang tìm kiếm");
   }
 }
