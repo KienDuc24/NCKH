@@ -104,3 +104,7 @@ body {
 #search_input.show {
   width: 250px;
 }
+
+.content{
+    min-height: 100vh;
+}
