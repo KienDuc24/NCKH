@@ -5,6 +5,7 @@ var indicator = document.querySelector('.nav-indicator');
 var items = document.querySelectorAll('.nav-item_link');
 var iframe = document.getElementById('contentsrc');
 
+
 function handleIndicator(el) {
   items.forEach(function (item) {
     item.classList.remove('is-active');
@@ -122,8 +123,7 @@ function performSearch() {
 var titlename = "Trang chủ"; 
 
 function gopage() {
-  var contentsrcElement = document.getElementById("contentsrc");
-  contentsrcElement.src = "../function/" + current + ".html";
+  iframe.src = "../function/" + current + ".html";
   if (current === "homepage") {
     titlename = "Trang chủ"; 
   }
@@ -145,3 +145,6 @@ function gopage() {
   document.title = titlename; 
 }
 
+function hptoabtus() {
+  window.alert("ab");
+}
