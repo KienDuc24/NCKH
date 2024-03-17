@@ -53,6 +53,7 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 500;
     position: relative;
+    cursor: pointer;
 }
 .nav-item:before {
     content: "";
@@ -61,13 +62,19 @@ body {
     border-radius: 8px 8px 0 0;
     opacity: 0;
     transition: 0.3s;
+    cursor: pointer;
 }
+
+
 .nav-item:not(.is-active):hover:before {
     opacity: 1;
     bottom: 0;
+    cursor: pointer;
 }
 .nav-item:not(.is-active):hover {
     color: #333;
+    cursor: pointer;
+    font-weight: bold;
 }
 .nav-indicator {
     position: absolute;
