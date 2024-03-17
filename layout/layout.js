@@ -30,7 +30,6 @@ items.forEach(function (item, index) {
 });
 
 var nav = document.getElementById("nav");
-var iframe = document.getElementById("contentsrc"); 
 
 iframe.contentWindow.addEventListener('wheel', handleScroll);
 let isScrolledToTop = false;
@@ -145,6 +144,8 @@ function gopage() {
   document.title = titlename; 
 }
 
-function hptoabtus() {
-  window.alert("ab");
-}
+setInterval(function(){
+  if(iframe.src.includes("")){
+    
+  }
+},100)
