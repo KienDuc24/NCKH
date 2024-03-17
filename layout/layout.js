@@ -29,13 +29,13 @@ items.forEach(function (item, index) {
 });
 
 var nav = document.getElementById("nav");
-var iframe = document.getElementById("your-iframe-id"); // Thay thế "your-iframe-id" bằng ID của iframe của bạn
+var iframe = document.getElementById("contentsrc"); 
 
 iframe.contentWindow.addEventListener('wheel', handleScroll);
 let isScrolledToTop = false;
 
 function checkScrollPosition() {
-  if (iframe.contentWindow.scrollY <= 64) {
+  if (iframe.contentWindow.scrollY <= 256) {
     isScrolledToTop = true;
   } else {
     isScrolledToTop = false;

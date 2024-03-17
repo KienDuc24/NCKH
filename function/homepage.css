@@ -9,11 +9,16 @@ body{
 }
 
 .main_img img{
-    width: 100vw;
+    width: 100%;
 }
 
 .background_test{
     background-color:aqua;
     height: 100vh;
     margin-top: 10px;
+}
+
+.spacemenu{
+    width: 1vw;
+    height: 64px;
 }
