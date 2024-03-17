@@ -92,11 +92,6 @@ body {
     right: 1.5vw;
 }
 
-.content{
-    margin: 64px;
-}
-
-
 #search_input {
   width: 0;
   transition: width 1s;

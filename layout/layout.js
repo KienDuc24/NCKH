@@ -1,9 +1,9 @@
 "use strict";
 
-var current = ""; 
+var current = "homepage"; 
 var indicator = document.querySelector('.nav-indicator');
 var items = document.querySelectorAll('.nav-item_link');
-
+var iframe = document.getElementById('contentsrc');
 
 function handleIndicator(el) {
   items.forEach(function (item) {
@@ -29,11 +29,13 @@ items.forEach(function (item, index) {
 });
 
 var nav = document.getElementById("nav");
-window.addEventListener('wheel', handleScroll);
+var iframe = document.getElementById("your-iframe-id"); // Thay thế "your-iframe-id" bằng ID của iframe của bạn
+
+iframe.contentWindow.addEventListener('wheel', handleScroll);
 let isScrolledToTop = false;
 
 function checkScrollPosition() {
-  if (window.scrollY <= 64) {
+  if (iframe.contentWindow.scrollY <= 64) {
     isScrolledToTop = true;
   } else {
     isScrolledToTop = false;
@@ -45,23 +47,22 @@ function handleScroll(event) {
 
   if (isScrolledToTop && event.deltaY < 0) {
     nav.style.display = "inline-flex";
-  } else if(!isScrolledToTop && event.deltaY >0){
-    nav.style.display= "inline-flex";
-  }if(!isScrolledToTop && event.deltaY<0){
+  } else if (!isScrolledToTop && event.deltaY > 0) {
+    nav.style.display = "inline-flex";
+  } else if (!isScrolledToTop && event.deltaY < 0) {
     nav.style.display = "none";
   }
 }
 
-window.addEventListener("scroll", function() {
+iframe.contentWindow.addEventListener("scroll", function() {
   checkScrollPosition();
 });
 
 function up (){
-    // Cuộn trang web lên đầu
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Tùy chọn: 'smooth' để có hiệu ứng cuộn mượt
-    });
+  iframe.contentWindow.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
 
   nav.style.display="inline-flex";
 }

@@ -14,14 +14,14 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            overflow: auto;
+            overflow: none;
         }
 
         .iframe-container {
             top: 64px;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 100vh;
         }
 
         .iframe-container iframe {
@@ -31,8 +31,9 @@
         }
 
         .content{
-            height: calc(100vh - 64px);
+            min-height: calc(100vh - 128px);
             margin-top: 64px;
+            width: 100%;
         }
     </style>
 </head>
@@ -63,19 +64,9 @@
     </div>
 
     <div class="iframe-container content">
-        <iframe id="contentsrc" src="../function/upload.html" frameborder="0"></iframe>
+        <iframe id="contentsrc" src="../function/homepage.html" frameborder="0" class="iframe"></iframe>
     </div>
     
     <script src="layout.js"></script>
 </body>
 </html>
-
-
-
-"../homepage.html"
-"../function/homepage.html"
-"../function/auboutus.html"
-"../function/dictionary.html
-"../function/measure.html"
-"../function/upload.html"
-"../function/uav.html"
