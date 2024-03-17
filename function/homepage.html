@@ -4,23 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homepage.css">
+
+    <script>
+        function handleLoad() {
+            var main_img = document.getElementById("main_img").offsetHeight;
+            var mainimg = document.getElementById("mainimg");
+          
+            mainimg.style.height = main_img + "px";
+          }
+          
+          function handleResize() {
+            var main_img = document.getElementById("main_img").offsetHeight;
+            var mainimg = document.getElementById("mainimg");
+          
+            mainimg.style.height = main_img + "px";
+          }
+          
+          window.addEventListener('load', handleLoad);
+          window.addEventListener('resize', handleResize);
+    </script>
 </head>
 <body>
     <div class="spacemenu" style="width: 1vw; height: 64px;"></div>
 
-    <div class="main_img">
-        <img src="../img/homepage/main.jpg" alt="" srcset="">
+    <div class="main">
+        <div class="main_img" id="mainimg">
+            <img src="../img/homepage/main.jpg" alt="" srcset="" id="main_img">
+        </div>
+    
+        <div class="abtusbg">
+            <div class="aboutus background_test part">
+                <div class="partname">
+                    <hr>
+                    <p>Giới thiệu</p>
+                </div>
+        
+                <div class="partcontent abtuscontent">
+                    <div class="abtusinto">
+                        <p>abc</p>
+                    </div>
+    
+                    <div class="abtuslogo">
+                        <img src="../img/homepage/logo.jpg" alt="" srcset="">
+                        <p>*Hình ảnh dự án*</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="dictionary background_test part">
+            <div class="partname">
+                <hr>
+                <p>Từ điển</p>
+            </div>
+    
+            <div class="partcontent">
+                <p>abc</p>
+            </div>
+        </div>
+    
+        <div class="measure background_test part">
+            <div class="partname">
+                <hr>
+                <p>Phương pháp</p>
+            </div>
+    
+            <div class="partcontent">
+                <p>abc</p>
+            </div>
+        </div>
+    
+        <div class="upload background_test part">
+            <div class="partname">
+                <hr>
+                <p>Tải lên</p>
+            </div>
+    
+            <div class="partcontent">
+                <p>abc</p>
+            </div>
+        </div>
+    
+        <div class="uav background_test part">
+            <div class="partname">
+                <hr>
+                <p>UAV</p>
+            </div>
+    
+            <div class="partcontent">
+                <p>abc</p>
+            </div>
+        </div>
     </div>
-
-    <div class="aboutus background_test"></div>
-
-    <div class="dictionary background_test"></div>
-
-    <div class="measure background_test"></div>
-
-    <div class="upload background_test"></div>
-
-    <div class="uav background_test"></div>
 
 </body>
 </html>

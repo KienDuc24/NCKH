@@ -45,7 +45,7 @@ function checkScrollPosition() {
 function handleScroll(event) {
   checkScrollPosition();
 
-  if (isScrolledToTop && event.deltaY < 0) {
+  if (isScrolledToTop) {
     nav.style.display = "inline-flex";
   } else if (!isScrolledToTop && event.deltaY > 0) {
     nav.style.display = "inline-flex";

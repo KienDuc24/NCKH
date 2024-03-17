@@ -1,3 +1,7 @@
+:root {
+    --partbg: antiquewhite;
+}
+  
 *{
     padding: 0;
     margin: 0;
@@ -8,17 +12,85 @@ body{
     width: 100%;
 }
 
+.main{
+    background-color: red;
+    display: block;
+}
+
 .main_img img{
     width: 100%;
+    
 }
 
-.background_test{
-    background-color:aqua;
-    height: 100vh;
-    margin-top: 10px;
+.part{
+    width: 75vw;
+    margin: 0 auto;
 }
 
-.spacemenu{
-    width: 1vw;
-    height: 64px;
+.background_test {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 50vh;
+    background-color: var(--partbg);
+}
+  
+.partname {
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+}
+  
+.partname hr {
+    height: 1px;
+    width: 50vw;
+    background-color: black;
+    border: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.partname p {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--partbg);
+    padding: 0 20px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.partcontent{
+    position: relative;
+    width: 70vw;
+    margin: 50px auto;
+}
+
+.abtusbg{
+    background-color:rgba(0, 0, 0, 0.026);
+}
+
+.abtuscontent{
+    display: flex;
+}
+
+.abtusinto{
+    width: 60vw;
+}
+
+.abtuslogo{
+    width: 40vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+}
+
+.abtuslogo img {
+    width: 20vw;
+}
+
+.abtuslogo p {
 }
