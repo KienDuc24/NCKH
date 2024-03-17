@@ -57,11 +57,10 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--partbg);
-    padding: 0 20px;
-    font-size: 30px;
+    padding: 0 1vw;
+    font-size: clamp(10px, 1.75vw, 35px);
     font-weight: 900;
-}
-
+  }
 .partcontent{
     position: relative;
     width: 70vw;
@@ -78,6 +77,10 @@ body{
 
 .abtusinto{
     width: 60vw;
+}
+
+.abtusinto button{
+    
 }
 
 .abtuslogo{
