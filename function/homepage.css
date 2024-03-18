@@ -135,6 +135,6 @@ button:not(#aboutus){
 
 .footer{
     background-color: black;
-    width: 100vw;
+    width: 100%;
     min-height: 50vh;
 }

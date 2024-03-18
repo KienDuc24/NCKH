@@ -3,9 +3,14 @@
 var current = "homepage"; 
 var indicator = document.querySelector('.nav-indicator');
 var items = document.querySelectorAll('.nav-item_link');
+var nav = document.getElementById("nav");
+var allnav = document.querySelectorAll("#nav");
 var iframe = document.getElementById('contentsrc');
 
-
+var searchDiv = document.getElementById("search_div");
+var searchInput = document.getElementById("search_input");
+var searchIcon = document.getElementById("search_icon");
+var inputValue = searchInput.value;
 
 function handleIndicator(el) {
   items.forEach(function (item) {
@@ -30,34 +35,32 @@ items.forEach(function (item, index) {
   item.classList.contains('is-active') && handleIndicator(item);
 });
 
-var nav = document.getElementById("nav");
+// iframe.contentWindow.addEventListener('wheel', handleScroll);
+// let isScrolledToTop = false;
 
-iframe.contentWindow.addEventListener('wheel', handleScroll);
-let isScrolledToTop = false;
+// function checkScrollPosition() {
+//   if (iframe.contentWindow.scrollY <= 256) {
+//     isScrolledToTop = true;
+//   } else {
+//     isScrolledToTop = false;
+//   }
+// }
 
-function checkScrollPosition() {
-  if (iframe.contentWindow.scrollY <= 256) {
-    isScrolledToTop = true;
-  } else {
-    isScrolledToTop = false;
-  }
-}
+// function handleScroll(event) {
+//   checkScrollPosition();
 
-function handleScroll(event) {
-  checkScrollPosition();
+//   if (isScrolledToTop) {
+//     nav.style.display = "inline-flex";
+//   } else if (!isScrolledToTop && event.deltaY > 0) {
+//     nav.style.display = "inline-flex";
+//   } else if (!isScrolledToTop && event.deltaY < 0) {
+//     nav.style.display = "none";
+//   }
+// }
 
-  if (isScrolledToTop) {
-    nav.style.display = "inline-flex";
-  } else if (!isScrolledToTop && event.deltaY > 0) {
-    nav.style.display = "inline-flex";
-  } else if (!isScrolledToTop && event.deltaY < 0) {
-    nav.style.display = "none";
-  }
-}
-
-iframe.contentWindow.addEventListener("scroll", function() {
-  checkScrollPosition();
-});
+// iframe.contentWindow.addEventListener("scroll", function() {
+//   checkScrollPosition();
+// });
 
 function up (){
   iframe.contentWindow.scrollTo({
@@ -67,11 +70,6 @@ function up (){
 
   nav.style.display="inline-flex";
 }
-
-var searchDiv = document.getElementById("search_div");
-var searchInput = document.getElementById("search_input");
-var searchIcon = document.getElementById("search_icon");
-var inputValue = searchInput.value;
 
 // Gắn sự kiện keypress vào trường input
 searchInput.addEventListener("keydown", function(event) {
@@ -96,18 +94,21 @@ async function firstStatement() {
 }
 
 async function secondStatement() {
-  document.addEventListener("click", function(event) {
+  function handleOutsideClick(event) {
     var targetElement = event.target;
-
+  
     // Kiểm tra nếu không phải là searchInput hoặc là một phần tử con của searchInput
     if (targetElement !== searchDiv && !searchDiv.contains(targetElement) && inputValue.trim() === "") {
       searchInput.classList.remove("show"); // Xóa class "show" để thu hẹp search input
-
+  
       setTimeout(function() {
         searchInput.style.display = "none";
       }, 600); // Đợi 1s trước khi ẩn searchInput hoàn toàn
     }
-  });
+  }
+  
+  document.addEventListener("click", handleOutsideClick);
+  iframe.contentWindow.document.addEventListener("click", handleOutsideClick);
 }
 
 function performSearch() {
@@ -142,6 +143,12 @@ function gopage() {
   if (current === "uav") {
     titlename = "UAV"; 
   }
+
   document.title = titlename; 
 }
 
+iframe.addEventListener("load", function() {
+  allnav.forEach(function(navItem) {
+    navItem.style.display = "inline-flex";
+  });
+});
