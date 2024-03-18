@@ -13,7 +13,7 @@ body{
 }
 
 .main{
-    background-color: red;
+    background-color: var(--partbg);
     display: block;
 }
 
@@ -25,6 +25,12 @@ body{
 .part{
     width: 75vw;
     margin: 0 auto;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 50vh;
+    position: relative;
 }
 
 .background_test {
@@ -33,7 +39,6 @@ body{
     flex-direction: column;
     height: auto;
     min-height: 50vh;
-    background-color: var(--partbg);
 }
   
 .partname {
@@ -58,9 +63,12 @@ body{
     transform: translate(-50%, -50%);
     background-color: var(--partbg);
     padding: 0 1vw;
-    font-size: clamp(10px, 1.75vw, 35px);
+    font-size: clamp(20px, 1.75vw, 35px);
     font-weight: 900;
-  }
+    text-transform: uppercase;
+}
+
+
 .partcontent{
     position: relative;
     width: 70vw;
@@ -68,7 +76,7 @@ body{
 }
 
 .abtusbg{
-    background-color:rgba(0, 0, 0, 0.026);
+    background-color:rgba(0, 0, 0, 0.05);
 }
 
 .abtuscontent{
@@ -79,8 +87,8 @@ body{
     width: 60vw;
 }
 
-.abtusinto button{
-    
+.abtusinto p{
+    font-size: clamp(12px, 1.5vw, 18px);
 }
 
 .abtuslogo{
@@ -96,4 +104,37 @@ body{
 }
 
 .abtuslogo p {
+    margin-top: 10px;
+    font-size: clamp(12px, 1.5vw, 18px)
+}
+
+button{
+    padding: 1.5vh 1.5vw;
+    border-radius: 20px;
+    border: 2px solid red;
+    font-size: min(2vw,2vh);
+}
+
+button:hover {
+    filter: drop-shadow(0.2vh 0.2vw 1px red);
+    margin-top: 0.5vh;
+    font-weight: bolder;
+}
+
+button#aboutus{
+    position: absolute;
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+button:not(#aboutus){
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer{
+    background-color: black;
+    width: 100vw;
+    min-height: 50vh;
 }
