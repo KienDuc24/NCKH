@@ -6,6 +6,7 @@ var items = document.querySelectorAll('.nav-item_link');
 var iframe = document.getElementById('contentsrc');
 
 
+
 function handleIndicator(el) {
   items.forEach(function (item) {
     item.classList.remove('is-active');
@@ -144,8 +145,3 @@ function gopage() {
   document.title = titlename; 
 }
 
-setInterval(function(){
-  if(iframe.src.includes("")){
-    
-  }
-},100)
