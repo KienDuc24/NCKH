@@ -71,7 +71,7 @@ body{
 
 .partcontent{
     position: relative;
-    width: 70vw;
+    width: 50vw;
     margin: 50px auto;
 }
 
@@ -113,6 +113,7 @@ button{
     border-radius: 20px;
     border: 2px solid red;
     font-size: min(2vw,2vh);
+    margin-top: 1vh;
 }
 
 button:hover {
@@ -133,8 +134,79 @@ button:not(#aboutus){
     transform: translateX(-50%);
 }
 
+.dictimg{
+    height: 40vh;
+}
+
+.description li{
+    list-style:none;
+}
+
+.description_container {
+    background-color:var(--partbg);
+    opacity: 0.9;
+    height: 100%;
+    width: 0;
+    transition: width 1s;
+    float: right;
+    margin: 0 auto;
+}
+
+.description_container {
+    width: 0%; 
+    transition: width 1s;
+}
+
+.plantname{
+    text-align: center;
+    padding: 1vh;
+    font-size: large;
+}
+
+.dictimg > .description_container li,
+.plantname {
+    display: none;
+}
+  
+.dictimg:hover .description_container {
+    width: 30%; 
+    padding: 0 5vh;
+
+}
+
+.dictimg:hover> .description_container li,
+.dictimg:hover .plantname {
+    display: block;
+}
+
+
+
 .footer{
     background-color: black;
     width: 100%;
     min-height: 50vh;
+}
+
+.plant1{
+    height: 50vh;
+    width: 100vh;
+    background-color: aqua;
+}
+
+.plant2{
+    height: 50vh;
+    width: 100vh;
+    background-color: azure;
+}
+
+.plant3{
+    height: 50vh;
+    width: 100vh;
+    background-color:blueviolet
+}
+
+.plant4{
+    height: 50vh;
+    width: 100vh;
+    background-color: brown;
 }

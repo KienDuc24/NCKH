@@ -132,10 +132,7 @@ function gopage() {
     titlename = "Giới thiệu"; 
   }
   if (current === "dictionary") {
-    titlename = "Từ điển"; 
-  }
-  if (current === "measure") {
-    titlename = "Phương pháp"; 
+    titlename = "Thư vnện"; 
   }
   if (current === "upload") {
     titlename = "Tải lên"; 
@@ -152,3 +149,4 @@ iframe.addEventListener("load", function() {
     navItem.style.display = "inline-flex";
   });
 });
+
