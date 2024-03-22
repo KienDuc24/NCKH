@@ -179,34 +179,20 @@ button:not(#aboutus){
     display: block;
 }
 
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: #8a8585c0;
+    border-radius: 50%;
+    display: inline-block;
+}
 
+.dotcontainer{
+    display: flex;
+}
 
 .footer{
     background-color: black;
     width: 100%;
     min-height: 50vh;
-}
-
-.plant1{
-    height: 50vh;
-    width: 100vh;
-    background-color: aqua;
-}
-
-.plant2{
-    height: 50vh;
-    width: 100vh;
-    background-color: azure;
-}
-
-.plant3{
-    height: 50vh;
-    width: 100vh;
-    background-color:blueviolet
-}
-
-.plant4{
-    height: 50vh;
-    width: 100vh;
-    background-color: brown;
 }
