@@ -3,9 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dictionary.css">
+    <script src="dictionary.js"></script>
 </head>
 <body>
     <div class="spacemenu" style="width: 1vw; height: 64px;"></div>
-    DICTIONARY
+
+    <div class="main">
+        <div class="main_img" id="mainimg">
+            <img src="../img/homepage/main.jpg" alt="" srcset="" id="main_img">
+        </div>
+    
+        <div class="aboutus background_test part">
+            <div class="partname">
+                <hr>
+                <p>Giới thiệu</p>
+            </div>
+    
+            <div class="partcontent abtuscontent">
+                <div class="abtusinto">
+                    <p>Đây là một dự án...</p>
+                    <button class="tolink" id="aboutus" onclick="hptoabtus()">Xem thêm</button>
+                </div>
+
+                <div class="abtuslogo">
+                    <img src="../img/homepage/logo.jpg" alt="" srcset="">
+                    <p>*Hình ảnh dự án*</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="dictionary background_test part">
+            <div class="partname">
+                <hr>
+                <p>Thư viện</p>
+            </div>
+    
+            <div class="partcontent">
+                <div class="slider">
+                    <div class="arrow left">
+                        <img src="https://img.icons8.com/?size=256&id=37320&format=png" alt="Previous">
+                    </div>
+                    <div class="slides">
+                        <div class="slide" id="slide1">
+                            <div class="dictimg">
+                                <div class="description_container">
+                                    <div class="plantcontainer first_plant" id="plant1">
+                                        <p class="plantname">Cây cà chua</p>
+                                            <ul class="description">
+                                                <li>Mô tả 1</li>
+                                                <li>Mô tả 2</li>
+                                                <li>Mô tả 3</li>
+                                                <li>Mô tả 4</li>
+                                            </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide" id="slide2">
+                            <div class="dictimg">
+                                <div class="description_container">
+                                    <div class="plantcontainer first_plant" id="plant1">
+                                        <p class="plantname">Cây ổi</p>
+                                            <ul class="description">
+                                                <li>Mô tả 1</li>
+                                                <li>Mô tả 2</li>
+                                                <li>Mô tả 3</li>
+                                                <li>Mô tả 4</li>
+                                            </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide" id="slide3">
+                            <div class="dictimg">
+                                <div class="description_container">
+                                    <div class="plantcontainer first_plant" id="plant1">
+                                        <p class="plantname">Cây lúa</p>
+                                            <ul class="description">
+                                                <li>Mô tả 1</li>
+                                                <li>Mô tả 2</li>
+                                                <li>Mô tả 3</li>
+                                                <li>Mô tả 4</li>
+                                            </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide" id="slide4">
+                            <div class="dictimg">
+                                <div class="description_container">
+                                    <div class="plantcontainer first_plant" id="plant1">
+                                        <p class="plantname">Cây ngô</p>
+                                            <ul class="description">
+                                                <li>Mô tả 1</li>
+                                                <li>Mô tả 2</li>
+                                                <li>Mô tả 3</li>
+                                                <li>Mô tả 4</li>
+                                            </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrow right">
+                        <img src="https://img.icons8.com/?size=256&id=37321&format=png" alt="Next">
+                    </div>
+                    <div class="dots">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+
+               
+
+                <button class="tolink" id="dictionary" onclick="hptodict()">Xem thêm</button>
+            </div>
+    
+        <div class="upload background_test part">
+            <div class="partname">
+                <hr>
+                <p>Tải lên</p>
+            </div>
+    
+            <div class="partcontent">
+                <div class="container">
+                    <h1>Upload File</h1>
+                    <form id="file-upload-form" enctype="multipart/form-data" action="/upload" method="post">
+                        <input type="file" name="file" id="file-input" required>
+                        <label for="file-input">Choose a file</label>
+                        <button type="submit">Upload</button>
+                    </form>
+                    <div id="output"></div>
+                </div>
+            </div>
+            
+                
+            </div>
+        </div>
+    
+        <div class="uav background_test part">
+            <div class="partname">
+                <hr>
+                <p>UAV</p>
+            </div>
+    
+            <div class="partcontent">
+                <p>abc</p>
+                <button class="tolink" id="uav" onclick="hptouav()">Xem thêm</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const arrows = document.querySelectorAll('.arrow');
+
+        let currentSlide = 0;
+        let timer = null;
+
+        const init = () => {
+            slides.forEach((slide, index) => {
+                slide.style.left = `${index * 100}%`;
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    changeSlide(index);
+                });
+            });
+
+            arrows.forEach((arrow) => {
+                arrow.addEventListener('click', () => {
+                    if (arrow.classList.contains('left')) {
+                        changeSlide(currentSlide - 1);
+                    } else {
+                        changeSlide(currentSlide + 1);
+                    }
+                });
+            });
+
+            timer = setInterval(() => {
+                changeSlide(currentSlide + 1);
+            }, 10000);
+
+            slider.addEventListener('mouseover', () => {
+                clearInterval(timer);
+            });
+
+            slider.addEventListener('mouseout', () => {
+                timer = setInterval(() => {
+                    changeSlide(currentSlide + 1);
+                }, 10000);
+            });
+        };
+
+        const changeSlide = (index) => {
+            clearInterval(timer);
+
+            if (index > slides.length - 1) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            slides.forEach((slide, slideIndex) => {
+                slide.style.transition = `transform 0.5s ease-in-out`;
+                slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+                if (slideIndex === currentSlide) {
+                    slide.style.transition = 'none';
+                }
+            });
+
+            dots.forEach((dot, dotIndex) => {
+                if (dotIndex === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+            timer = setInterval(() => {
+                changeSlide(currentSlide + 1);
+            }, 10000);
+        };
+
+        init();
+    </script>
+
 </body>
 </html>

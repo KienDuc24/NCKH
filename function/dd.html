@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            font-family: sans-serif;
+          }
+          
+          form {
+            background: #ccc;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid black;
+          }
+          
+          form ol {
+            padding-left: 0;
+          }
+          
+          form li,
+          div > p {
+            background: #eee;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            list-style-type: none;
+            border: 1px solid black;
+          }
+          
+          form img {
+            height: 64px;
+            order: 1;
+          }
+          
+          form p {
+            line-height: 32px;
+            padding-left: 10px;
+          }
+          
+          form label,
+          form button {
+            background-color: #7f9ccb;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px ridge black;
+            font-size: 0.8rem;
+            height: auto;
+          }
+          
+          form label:hover,
+          form button:hover {
+            background-color: #2d5ba3;
+            color: white;
+          }
+          
+          form label:active,
+          form button:active {
+            background-color: #0d3f8f;
+            color: white;
+          }
+          
+    </style>
+</head>
+<body>
+  <form id="uploadForm" action="upload.php" method="POST" enctype="multipart/form-data">
+    <input type="file" id="image_uploads" name="image_uploads[]" multiple>
+    <button type="submit">Upload</button>
+  </form>
+    
+    <script>
+      const form = document.getElementById("uploadForm");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const input = document.getElementById("image_uploads");
+
+  if (input.files.length > 0) {
+    form.submit();
+  }
+});
+
+      
+    </script>
+</body>
+</html>

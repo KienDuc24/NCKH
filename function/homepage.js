@@ -119,30 +119,5 @@ function hptouav() {
 // Thư viện
 
 
-// Images Area Images
-let imagesAreaImages = document.querySelectorAll('.images-area img');
-// Images Area First Image
-let imagesAreaFirstImage = document.querySelector('.images-area .firstImage');
-
-// Previous And Next Buttons
-let previousBtn = document.querySelector('.previous-btn');
-let nextBtn = document.querySelector('.next-btn');
-
-// Pagination Area 
-let paginationArea = document.querySelector('.pagination-area');
-
-// Current Image Count
-let currentImageCount = 1;
-
-// Slider Controler Function
-let sliderController;
-// Create Pagination Spans Function
-let createPaginationSpans;
-
-// Every Click On Buttons
-previousBtn.addEventListener('click', previousImage);
-nextBtn.addEventListener('click', nextImage);
-
-
 
 

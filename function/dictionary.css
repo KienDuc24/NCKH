@@ -12,34 +12,7 @@ body{
     width: 100%;
 }
 
-.main{
-    background-color: var(--partbg);
-    display: block;
-}
 
-.main_img img{
-    width: 100%;
-    
-}
-
-.part{
-    width: 75vw;
-    margin: 0 auto;
-    margin-top: 0px;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    min-height: 50vh;
-    position: relative;
-}
-
-.background_test {
-    margin-top: 0px;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    min-height: 50vh;
-}
   
 .partname {
     display: flex;
