@@ -71,7 +71,7 @@ body{
 
 .partcontent{
     position: relative;
-    width: 50vw;
+    width: 75vw;
     margin: 50px auto;
 }
 
@@ -136,7 +136,8 @@ button:not(#aboutus){
 
 /* Thư viện */
 .dictimg{
-    height: 100%;
+    height: 100%; 
+    border: solid 1px black;   
 }
 
 .description li{
@@ -205,19 +206,19 @@ button:not(#aboutus){
 }
 
 .slide:nth-child(1) {
-    background-image: url('https://picsum.photos/id/1015/1200/600');
+    background-image: url('../img/homepage/corn.jpg');
 }
 
 .slide:nth-child(2) {
-    background-image: url('https://picsum.photos/id/1016/1200/600');
+    background-image: url('../img/homepage/guava.jpg');
 }
 
 .slide:nth-child(3) {
-    background-image: url('https://picsum.photos/id/1018/1200/600');
+    background-image: url('../img/homepage/paddy.jpg');
 }
 
 .slide:nth-child(4) {
-    background-image: url('https://picsum.photos/id/1019/1200/600');
+    background-image: url('../img/homepage/tomato.jpg');
 }
 
 .slider .arrow {

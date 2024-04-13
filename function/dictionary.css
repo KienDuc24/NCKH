@@ -10,10 +10,20 @@
 body{
     height: 100vh;
     width: 100%;
+    background-color: var(--partbg);
+}
+
+.part{
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: relative;
 }
 
 
-  
 .partname {
     display: flex;
     margin-top: 50px;
@@ -42,219 +52,70 @@ body{
 }
 
 
-.partcontent{
-    position: relative;
-    width: 50vw;
-    margin: 50px auto;
-}
-
-.abtusbg{
-    background-color:rgba(0, 0, 0, 0.05);
-}
-
-.abtuscontent{
+.gallery{
+    margin: 5vh auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 75vw;
 }
 
-.abtusinto{
-    width: 60vw;
+.gallery img {
+    border-radius: 16px;
+    border: 2px solid black;
+    width: 100%;
 }
 
-.abtusinto p{
-    font-size: clamp(12px, 1.5vw, 18px);
-}
-
-.abtuslogo{
-    width: 40vw;
-    align-items: center;
-    display: flex;
-    flex-direction: column;    
-    justify-content: center;
-}
-
-.abtuslogo img {
-    width: 20vw;
-}
-
-.abtuslogo p {
-    margin-top: 10px;
-    font-size: clamp(12px, 1.5vw, 18px)
-}
-
-button{
-    padding: 1.5vh 1.5vw;
-    border-radius: 20px;
-    border: 2px solid red;
-    font-size: min(2vw,2vh);
-    margin-top: 1vh;
-}
-
-button:hover {
-    filter: drop-shadow(0.2vh 0.2vw 1px red);
-    margin-top: 0.5vh;
-    font-weight: bolder;
-}
-
-button#aboutus{
-    position: absolute;
-    left: 25%;
-    transform: translateX(-50%);
-}
-
-button:not(#aboutus){
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Thư viện */
-.dictimg{
-    height: 100%;
-}
-
-.description li{
-    list-style:none;
-}
-
-.description_container {
-    backdrop-filter: blur(100px);
-    opacity: 0.9;
-    height: 100%;
-    width: 0;
-    transition: width 1s;
-    float: right;
-    margin: 0 auto;
-}
-
-.description_container {
-    width: 0%; 
-    transition: width 1s;
-}
-
-.plantname{
+.img_item{
     text-align: center;
-    padding: 1vh;
-    font-size: large;
+    width: 24%;
 }
 
-.dictimg > .description_container li,
-.plantname {
-    display: none;
+.gallery a{
+    font-size: clamp(20px, 1.2vw, 35px);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: auto;
+    padding: 3px;
+    color: black;
+}
+
+.name_img{
+    z-index: 100;
+    bottom: 0%;
+}
+
+.disease{
+    margin-top: 7vh;
+}
+
+.plant_name{
+    font-size: clamp(24px, 1.5vw, 35px);
+
+}
+
+.disease_name{
+    display: flex;
+    width: 70vw;
+    margin: 3vh auto;
+    font-size: clamp(10px, 1.2vw, 30px);
+}
+
+.disease_items{
+    flex: 1;
+}
+
+.disease ul {
+    list-style-type: none; /* Loại bỏ các dấu đầu dòng mặc định */
+    padding-left: 0; /* Loại bỏ khoảng cách lề trái mặc định */
 }
   
-.dictimg:hover .description_container {
-    width: 30%; 
-    padding: 0 5vh;
-
+.disease ul li:before {
+    content: "- "; /* Thêm dấu gạch ngang trước mỗi mục */
 }
 
-.dictimg:hover> .description_container li,
-.dictimg:hover .plantname {
-    display: block;
-}
-
-.slider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 400px;
-}
-
-.slides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.slide {
-    min-width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: 0.5s ease-in-out;
-}
-
-.slide:nth-child(1) {
-    background-image: url('https://picsum.photos/id/1015/1200/600');
-}
-
-.slide:nth-child(2) {
-    background-image: url('https://picsum.photos/id/1016/1200/600');
-}
-
-.slide:nth-child(3) {
-    background-image: url('https://picsum.photos/id/1018/1200/600');
-}
-
-.slide:nth-child(4) {
-    background-image: url('https://picsum.photos/id/1019/1200/600');
-}
-
-.slider .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-}
-
-.slider:hover .arrow {
-    display: flex;
-}
-
-.slider .arrow.left {
-    left: 20px;
-}
-
-.slider .arrow.right {
-    right: 20px;
-}
-
-.slider .arrow:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.slider .arrow img {
-    width: 20px;
-    height: 20px;
-}
-
-.slider .dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-}
-
-.slider .dots .dot {
-    width: 10px;
-    height:10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.slider .dots .dot.active {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-/* Tải lên */
-
-.footer{
-    background-color: black;
-    width: 100%;
-    min-height: 50vh;
-}
-
+a {
+    text-decoration: none; /* Loại bỏ gạch chân mặc định của liên kết */
+    color: inherit; /* Giữ nguyên màu chữ mặc định */
+    line-height: 2;
+  }

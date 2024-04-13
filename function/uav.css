@@ -1,0 +1,92 @@
+:root {
+    --partbg: antiquewhite;
+}
+  
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--partbg);
+}
+
+.part{
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 50vh;
+    position: relative;
+}
+
+.partname {
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+}
+  
+.partname hr {
+    height: 1px;
+    width: 50vw;
+    background-color: black;
+    border: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.partname p {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--partbg);
+    padding: 0 1vw;
+    font-size: clamp(20px, 1.75vw, 35px);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+button{
+    padding: 1.5vh 1.5vw;
+    border-radius: 20px;
+    border: 2px solid red;
+    font-size: min(2vw,2vh);
+    margin-top: 1vh;
+    width: 7.5vw;
+    font-weight: bolder;    
+    margin: 10px auto;
+}
+
+button:hover {
+    filter: drop-shadow(0.2vh 0.2vw 1px red);
+    margin-top: 0.5vh;
+    font-weight: bolder;
+}
+
+img{
+    width: 20vw;
+    margin: 0 auto;
+}
+
+p.request{
+    font-size: clamp(20px, 1.25vw, 35px);
+    /* font-weight: bold; */
+    text-align: center;
+    margin: 20px 0;
+}
+
+input {
+    width: 30vw;
+    height: 40px;
+    border-radius: 32px;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 30px;
+    padding: 5px 3vw;
+    border: 3px solid rgb(12, 125, 12);
+}
