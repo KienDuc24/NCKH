@@ -109,33 +109,49 @@ ul li {
 }
 
 .list_img{
-    width: 32%;
+    z-index: 2;
 }
 
 .list_img img{
-    z-index: 1;
+    z-index: 2;
+    max-width: 30vw;
+    border: 2px solid black;
 } 
 
-.list_container{
-    width: 70%;    
+.list_container{   
     z-index: 2;
 }
 
 div.list_content{
     background-color: aliceblue;
     padding: 30px;
-    box-shadow: 0px 0px 25px gray;    
-
+    box-shadow: 0px 0px 25px gray;  
+    z-index: 3;
+    position: relative;
+    width: 40vw;
 }
 
 .number{
     font-size: clamp(40px, 4vw, 100px);
     font-weight: 1000;
     color: grey;
-    margin: 1vw 0 10px 0;
+    margin: 1vw 0 0 0;
 }
 
 .one{
     display: flex;
     justify-content: end;
+}
+
+img.img2{
+    z-index: 2;
+    position: relative;
+}
+
+.lc1{
+    border-bottom-right-radius: 32px;
+}
+
+.lc2{
+    border-bottom-left-radius: 32px;
 }
