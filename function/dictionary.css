@@ -86,28 +86,94 @@ body{
 }
 
 .disease{
-    margin-top: 7vh;
+    margin: 7vh 0 0 0 ;
+    display: flex;
+    flex-direction: row;
+}
+
+.plant{
+    position: relative;
 }
 
 .plant_name{
-    font-size: clamp(24px, 1.5vw, 35px);
-
+    font-size: clamp(24px, 2vw, 35px);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    backdrop-filter: blur(100px);
+    font-weight: bolder;
+    width: 25vw;
+    text-align: center;
+    line-height: 1.5;
+    border: 1px solid black;
 }
 
 .disease_name{
+    flex: 6;
     display: flex;
-    width: 70vw;
-    margin: 3vh auto;
-    font-size: clamp(10px, 1.2vw, 30px);
+    width: 30vw;
+    font-size: clamp(12px, 1.2vw, 30px);
+    position: relative;
+}
+
+.left_left{
+    flex: 1;
+    padding-left: 25px;
+    background-color: aliceblue;
+    border-bottom-left-radius: 32px;
+    border-top-left-radius: 32px;
+}
+
+.left_right{
+    flex: 1;
+    padding-left: 25px;
+    background-color: aliceblue;
+}
+
+.right_left{
+    flex: 1;
+    padding-left: 25px;
+    background-color: aliceblue;
+}
+
+.right_right{
+    flex: 1;
+    padding-right: 25px;
+    background-color: aliceblue;
+    border-bottom-right-radius: 32px;
+    border-top-right-radius: 32px;
 }
 
 .disease_items{
-    flex: 1;
+    padding-top: 3vh;
+}
+
+.disease_img{
+    width: 25vw;
+    flex: 4;
+    border: 2px solid black;
+}
+
+img.left{
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+}
+
+img.right{
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+}
+
+p.left{
+    border-bottom-right-radius: 32px;
+}
+
+p.right{
+    border-bottom-left-radius: 32px;
 }
 
 .disease ul {
     list-style-type: none; /* Loại bỏ các dấu đầu dòng mặc định */
-    padding-left: 0; /* Loại bỏ khoảng cách lề trái mặc định */
 }
   
 .disease ul li:before {
@@ -117,5 +183,30 @@ body{
 a {
     text-decoration: none; /* Loại bỏ gạch chân mặc định của liên kết */
     color: inherit; /* Giữ nguyên màu chữ mặc định */
-    line-height: 2;
-  }
+    line-height: 3;
+
+}
+
+a:hover{
+    font-size: clamp(15px, calc(1.2vw + 3px), 35px);
+    font-weight: bolder;
+}
+
+button{
+    padding: 1.5vh 1.5vw;
+    border-radius: 20px;
+    border: 2px solid red;
+    font-size: clamp(10px, 1vw, 25px);
+    width: 8.5vw;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -30%);
+}
+
+button:hover {
+    filter: drop-shadow(0.2vh 0.2vw 1px red);
+    margin-top: 0.5vh;
+    font-weight: bolder;
+}

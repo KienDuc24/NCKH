@@ -116,7 +116,8 @@ function hptouav() {
     iframe.src = "../function/uav.html";
 }
 
-// Thư viện
+// Upload
+
 
 
 

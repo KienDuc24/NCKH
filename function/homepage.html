@@ -129,18 +129,32 @@
             </div>
     
             <div class="partcontent">
-                <div class="container">
-                    <h1>Upload File</h1>
-                    <form id="file-upload-form" enctype="multipart/form-data" action="/upload" method="post">
-                        <input type="file" name="file" id="file-input" required>
-                        <label for="file-input">Choose a file</label>
-                        <button type="submit">Upload</button>
-                    </form>
-                    <div id="output"></div>
-                </div>
-            </div>
-            
-                
+                <form class="dropzone-box">
+                    <h2>Tải lên file để dự đoán</h2>
+                    <p>Nhấn hoặc kéo file cần dự đoán vào</p>
+                    <div class="dropzone-area">
+                        <div class="file-upload-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-upload" width="24"
+                                height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1" />
+                                <path d="M9 15l3 -3l3 3" />
+                                <path d="M12 12l0 9" />
+                            </svg>
+                        </div>
+                        <input type="file" required id="upload-file" name="uploaded-file">
+                        <p class="file-info">Chưa có file</p>
+                    </div>
+                    <div class="dropzone-actions">
+                        <button type="reset" class="upload">
+                            Cancel
+                        </button>
+                        <button id="submit-button" type="submit" class="upload">
+                            Save
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     
@@ -149,15 +163,17 @@
                 <hr>
                 <p>UAV</p>
             </div>
-    
-            <div class="partcontent">
-                <p>abc</p>
+            
+            <img src="../img/uav/droneview-drone-view.gif" alt="" srcset="">
+            <div>
+                <p class="note"> Nhập mã liên kết để kiểm tra uav tương ứng</p>
                 <button class="tolink" id="uav" onclick="hptouav()">Xem thêm</button>
             </div>
         </div>
     </div>
 
     <script>
+        //Thư viện
         const slider = document.querySelector('.slider');
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
@@ -235,6 +251,66 @@
         };
 
         init();
+
+        //upload
+        const dropzoneBox = document.getElementsByClassName("dropzone-box")[0];
+        const inputFiles = document.querySelectorAll(
+        ".dropzone-area input[type='file']"
+        );
+
+        const inputElement = inputFiles[0];
+
+        const dropZoneElement = inputElement.closest(".dropzone-area");
+
+        inputElement.addEventListener("change", (e) => {
+        if (inputElement.files.length) {
+            updateDropzoneFileList(dropZoneElement, inputElement.files[0]);
+        }
+        });
+
+        dropZoneElement.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZoneElement.classList.add("dropzone--over");
+        });
+
+        ["dragleave", "dragend"].forEach((type) => {
+        dropZoneElement.addEventListener(type, (e) => {
+            dropZoneElement.classList.remove("dropzone--over");
+        });
+        });
+
+        dropZoneElement.addEventListener("drop", (e) => {
+        e.preventDefault();
+
+        if (e.dataTransfer.files.length) {
+            inputElement.files = e.dataTransfer.files;
+
+            updateDropzoneFileList(dropZoneElement, e.dataTransfer.files[0]);
+        }
+
+        dropZoneElement.classList.remove("dropzone--over");
+        });
+
+        const updateDropzoneFileList = (dropzoneElement, file) => {
+        let dropzoneFileMessage = dropzoneElement.querySelector(".file-info");
+
+        dropzoneFileMessage.innerHTML = `
+                ${file.name}, ${file.size} bytes
+            `;
+        };
+
+        dropzoneBox.addEventListener("reset", (e) => {
+        let dropzoneFileMessage = dropZoneElement.querySelector(".file-info");
+
+        dropzoneFileMessage.innerHTML = `No Files Selected`;
+        });
+
+        dropzoneBox.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const myFiled = document.getElementById("upload-file");
+        console.log(myFiled.files[0]);
+        });
+
     </script>
 
 </body>

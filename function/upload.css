@@ -23,6 +23,7 @@
 body{
     height: 100vh;
     width: 100%;
+    background-color: var(--partbg);
 }
 
 .main{
@@ -42,11 +43,16 @@ body{
     display: flex;
     flex-direction: column;
     height: auto;
+    min-height: 50vh;
     position: relative;
 }
 
-.part:last-of-type{
-    padding-bottom: 5vh;
+.background_test {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 50vh;
 }
   
 .partname {
@@ -76,13 +82,12 @@ body{
     text-transform: uppercase;
 }
 
+
 .partcontent{
     position: relative;
     width: 75vw;
-    margin: 50px auto;
+    margin: 0 auto;
 }
-
-
 
 .abtusbg{
     background-color:rgba(0, 0, 0, 0.05);
@@ -143,152 +148,7 @@ button:not(#aboutus,.upload){
     transform: translateX(-50%);
 }
 
-/* Thư viện */
-.dictimg{
-    height: 100%; 
-    border: solid 1px black;   
-}
-
-.description li{
-    list-style:none;
-}
-
-.description_container {
-    backdrop-filter: blur(100px);
-    opacity: 0.9;
-    height: 100%;
-    width: 0;
-    transition: width 1s;
-    float: right;
-    margin: 0 auto;
-}
-
-.description_container {
-    width: 0%; 
-    transition: width 1s;
-}
-
-.plantname{
-    text-align: center;
-    padding: 1vh;
-    font-size: large;
-}
-
-.dictimg > .description_container li,
-.plantname {
-    display: none;
-}
-  
-.dictimg:hover .description_container {
-    width: 30%; 
-    padding: 0 5vh;
-
-}
-
-.dictimg:hover> .description_container li,
-.dictimg:hover .plantname {
-    display: block;
-}
-
-.slider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 400px;
-}
-
-.slides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.slide {
-    min-width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: 0.5s ease-in-out;
-}
-
-.slide:nth-child(1) {
-    background-image: url('../img/homepage/corn.jpg');
-}
-
-.slide:nth-child(2) {
-    background-image: url('../img/homepage/guava.jpg');
-}
-
-.slide:nth-child(3) {
-    background-image: url('../img/homepage/paddy.jpg');
-}
-
-.slide:nth-child(4) {
-    background-image: url('../img/homepage/tomato.jpg');
-}
-
-.slider .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-}
-
-.slider:hover .arrow {
-    display: flex;
-}
-
-.slider .arrow.left {
-    left: 20px;
-}
-
-.slider .arrow.right {
-    right: 20px;
-}
-
-.slider .arrow:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.slider .arrow img {
-    width: 20px;
-    height: 20px;
-}
-
-.slider .dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-}
-
-.slider .dots .dot {
-    width: 10px;
-    height:10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.slider .dots .dot.active {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
 /* Tải lên */
-
 .dropzone-box {
     border-radius: 1rem;
     padding: 2rem;
@@ -401,15 +261,13 @@ button:not(#aboutus,.upload){
     background: var(--primary-hover);
 }
 
-/* UAV */
+h2{
+    text-transform: uppercase;
+}
+
 p.note{
     font-size: clamp(20px, 1.25vw, 35px);
     /* font-weight: bold; */
     text-align: center;
-    margin: 20px 0;
-}
-
-img{
-    width: 20vw;
-    margin: 0 auto;
+    margin: 50px 0 20px 0;
 }
