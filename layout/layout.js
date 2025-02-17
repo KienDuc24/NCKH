@@ -132,7 +132,7 @@ function gopage() {
     titlename = "Giới thiệu"; 
   }
   if (current === "dictionary") {
-    titlename = "Thư vnện"; 
+    titlename = "Thư viện"; 
   }
   if (current === "upload") {
     titlename = "Tải lên"; 

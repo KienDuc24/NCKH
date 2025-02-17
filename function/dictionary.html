@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dictionary.css">
-    <script src="dictionary.js"></script>
 </head>
 <body>
     <div style="width: 1vw; height: 64px;"></div>
@@ -16,16 +15,10 @@
         </div>
         <div class="gallery">
             <div class="img_item">
-                <img src="../img/dictionary/corn.jpg" alt=""> <a class="name_img"> Cây ngô </a>
+                <img src="../img/dictionary/corn.jpg" alt=""> <a class="name_img"> Cây ngô 
             </div>            
             <div class="img_item">
-                <img src="../img/dictionary/guava.jpg" alt=""> <a class="name_img"> Cây ổi </a>
-            </div>
-            <div class="img_item">
-                <img src="../img/dictionary/paddy.jpg" alt=""> <a class="name_img"> Cây lúa </a>
-            </div>
-            <div class="img_item">
-                <img src="../img/dictionary/tomato.jpg" alt=""> <a class="name_img"> Cây cà chua </a>
+                <img src="../img/dictionary/tomato.jpg" alt=""> <a class="name_img"> Cây cà chua 
             </div>
         </div>
     </div>
@@ -45,84 +38,38 @@
                 
                 <div class="disease_name">
                     <ul class="right_left disease_items">
-                        <li><a href="">Bệnh A</a></li>
-                        <li><a href="">Bệnh B</a></li>
-                        <li><a href="">Bệnh C</a></li>
+                        <li onclick="showmore()">Bệnh đốm lá lớn</li>
+                        <li onclick="showmore()">Bệnh gỉ sắt</li>
+                        <li onclick="showmore()">Bệnh khô vằn</li>
                     </ul>
                     <ul class="right_right disease_items">
-                        <li><a href="">Bệnh D</a></li>
-                        <li><a href="">Bệnh E</a></li>
-                        <li><a href="">Bệnh F</a></li>
+                        <li onclick="showmore()">Bệnh thối thân</li>
+                        <li onclick="showmore()">Bệnh virus sọc lá ngô</li>
+                        <li onclick="showmore()">Bệnh khảm ngô</li>
                     </ul>
                     
-                    <button type="submit">Xem thêm</button>
+                    <button type="submit" onclick="showmore()">Xem thêm</button>
                 </div>
             </div>
         </div>
+
+        
 
         <div class="part">
             <div class="disease">
                 <div class="disease_name">
                     <ul class="left_left disease_items">
-                        <li><a href="">Bệnh A</a></li>
-                        <li><a href="">Bệnh B</a></li>
-                        <li><a href="">Bệnh C</a></li>
+                        <li onclick="showmore()">Bệnh đốm lá</li>
+                        <li onclick="showmore()">Bệnh thán thư</li>
+                        <li onclick="showmore()">Bệnh phấn trắng</li>
                     </ul>
                     <ul class="left_right disease_items">
-                        <li><a href="">Bệnh D</a></li>
-                        <li><a href="">Bệnh E</a></li>
-                        <li><a href="">Bệnh F</a></li>
+                        <li onclick="showmore()">Bệnh cuốn lá</li>
+                        <li onclick="showmore()">Bệnh úa sớm</li>
+                        <li onclick="showmore()">Bệnh héo rũ</li>
                     </ul>
 
-                    <button type="submit">Xem thêm</button>
-                </div>
-
-                <div class="plant">
-                    <img class="disease_img left" src="../img/dictionary/guava.jpg" alt="" srcset="">
-                    <p class="plant_name left">Cây ổi</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="part">
-            <div class="disease">
-                <div class="plant">
-                    <img class="disease_img right" src="../img/dictionary/paddy.jpg" alt="" srcset="">
-                    <p class="plant_name right">Cây lúa</p>
-                </div>
-                
-                <div class="disease_name">
-                    <ul class="right_left disease_items">
-                        <li><a href="">Bệnh A</a></li>
-                        <li><a href="">Bệnh B</a></li>
-                        <li><a href="">Bệnh C</a></li>
-                    </ul>
-                    <ul class="right_right disease_items">
-                        <li><a href="">Bệnh D</a></li>
-                        <li><a href="">Bệnh E</a></li>
-                        <li><a href="">Bệnh F</a></li>
-                    </ul>
-                    
-                    <button type="submit">Xem thêm</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="part">
-            <div class="disease">
-                <div class="disease_name">
-                    <ul class="left_left disease_items">
-                        <li><a href="">Bệnh A</a></li>
-                        <li><a href="">Bệnh B</a></li>
-                        <li><a href="">Bệnh C</a></li>
-                    </ul>
-                    <ul class="left_right disease_items">
-                        <li><a href="">Bệnh D</a></li>
-                        <li><a href="">Bệnh E</a></li>
-                        <li><a href="">Bệnh F</a></li>
-                    </ul>
-
-                    <button type="submit">Xem thêm</button>
+                    <button type="submit" onclick="showmore()">Xem thêm</button>
                 </div>
 
                 <div class="plant">
@@ -132,7 +79,266 @@
             </div>
         </div>
     </div>
-    <div style="width: 1vw; height: 5vh;"></div>
 
+    <div class="showmore" id="show">
+        <img src="../img/logo.png" onclick="closeShow()" class="close" alt="" srcset="">
+        
+        <div class="show_part">
+            <p class="c">Cây ngô</p>
+            <div class="tomato">
+                <div class="left_p">
+                </div>
+                <div class="right_p">
+                   <div class="sc">
+                        <img id="sm_img" src="../img/n_dom-la.jpg">
+
+                        <div>
+                            <p class="d_name">Bệnh đốm lá lớn</p>
+                        
+                            <span class="mesure">
+    
+                                *Tác nhân gây bệnh
+                                
+                                Bệnh do nấm  Helminthosporium   turcicum  gây ra
+                                <br>
+                                
+                                *Biện pháp phòng trừ <br>
+                                
+                                – Luân canh trồng ngô với cây họ đậu.<br>
+                                
+                                – Dùng giống ngô chống bệnh<br>
+                                
+                                – Thu gom tàn dư cây ngô rồi đưa ra khỏi ruộng tiêu huỷ.
+                            </span>
+                        </div>
+                   </div>
+
+                   <div class="sc">
+                        <img id="sm_img" src="../img/2-Ngo-Benh-gi-sat (500).jpg">
+
+                        <div>
+                            <p class="d_name">Bệnh gỉ sắt</p>
+                    
+                            <span class="mesure">
+                                
+                                *Tác nhân gây bệnh
+                                
+                                Bệnh do nấm Puccinia maydis  gây ra.
+                                <br>
+                                *Biện pháp phòng trừ
+                                <br>
+                                – Vệ sinh đồng ruộng, tiêu diệt nguồn bệnh. Tăng cường thâm canh.
+                                <br>
+                                – Dùng thuốc trừ nấm: New Kasuran; Dithane; Anvil; Kumulus; Cavil; Tilvil; Vectra; Copper – zin C…
+                            </span> 
+                        </div>
+                   </div>
+
+                   <div class="sc">
+                        <img id="sm_img" src="../img/benh-kho-van-hai-ngo.jpg">
+
+                        <div>
+                            <p class="d_name">Bệnh khô vằn</p>
+                    
+                            <span class="mesure">
+                            
+                                * Triệu chứng bệnh
+                                
+                                Bệnh hại trên các bộ phận phiến lá, bẹ lá, thân và bắp ngô tạo ra các vết bệnh lớn màu xám tro, loang lổ đốm vằn da hổ, hình dạng bất định như dạng đám mây. 
+                                <br>
+                                *Nguyên nhân gây bệnh
+                                <br>
+                                Bệnh do nấm Rhizoctonia solani Kuhn gây ra.
+                                
+                                <br>
+                                *Biện pháp phòng trừ
+                                <br>
+                                Khi bệnh xuất hiện có thể phun thuốc Validacin 5SL (1,5 l/ha); Tilt super 300ND 0,1% ( 0,4 l/ha); Rovral 50WP – 0,2% (1,5 kg/ha). Phun 2 – 3 lần cách nhau 10 ngày, kết hợp tỉa bóc lá bệnh khô chết trên cây.
+                            </span>
+                        </div>
+                   </div>
+
+                   <div class="sc">
+
+                    <img id="sm_img" src="../img/OIP.jpg">
+
+                    <div>
+                      <p class="d_name">Bệnh thối thân</p>
+                  
+                      <span class="mesure">
+                          
+                          *Tác nhân gây bệnh
+                          <br>
+                          – Bệnh do vi khuẩn Pseudomonas alboprecipitanas Rosen gây ra
+                          <br>
+                          
+                          *Biện pháp phòng trừ
+                          <br>
+                          – Sau thu hoạch dọn sạch tàn dư cây trồng đem ra khỏi ruộng và tiêu huỷ
+                          <br>
+                          
+                          – Dùng một số loại thuốc trừ vi khuẩn đặc hiệu phun trừ bệnh trên ngô theo chỉ dẫn.
+                      </span>
+                    </div>
+                   </div>
+
+                  <div class="sc">
+                    <img id="sm_img" src="../img/virus-soc-la.jpg">
+
+                    <div>
+                        <p class="d_name">Bệnh virus sọc lá ngô</p>
+                
+                        <span class="mesure">
+                            *Tác nhân gây bệnh
+                            <br>
+                            – Bệnh do virus Maize streak gây nên. Virus gây bệnh truyền bệnh chủ yếu bằng con đường môi giới là các loại rầy  Calligypona pellucida, C.marginata, C.propinqua…Virus phát triển mạnh trong điều kiện nhiệt độ từ 17 – 24oC.
+                            <br>
+                            *Biện pháp phòng trừ:
+                            <br>
+                            – Dùng giống chống bệnh
+                            <br>
+                            – Gieo ngô đúng thời vụ
+                            <br>
+                            – Phun thuốc trừ môi giới truyền bệnh bằng các loại thuốc đặc hiệu: Cypermethrin, Dimethoate, Nereistoxyn, …
+                        </span>
+                    </div>
+                  </div>
+
+                   <div class="sc">
+                    <img id="sm_img" src="../img/kham-ngo.jpg">
+
+                    <div>
+                        <p class="d_name">Bệnh khảm ngô</p>
+                    
+                            <span class="mesure">*Triệu chứng
+
+                                Ở gốc lá có các chấm màu đậm xen lẫn với màu nhạt, sau đó hoà hợp với nhau thành từng vết dọc theo phiến lá, lá bệnh chuyển dần sang màu vàng, về sau ở ria và đỉnh lá có pha sắc đỏ, màu đỏ dần hiện rõ lên. 
+                                *Tác nhân gây bệnh: Bệnh do virus Maize dwarf mosaic gây ra
+                                <br>
+                                *Biện pháp phòng trừ
+                                <br>
+                                – Chọn cây sạch bệnh để lấy hạt làm giống
+                                <br>
+                                – Diệt côn trùng môi giới truyền bệnh (rệp)
+                                <br>
+                                – Vệ sinh đồng ruộng, làm sạch cỏ dại, thâm canh cây ngô.
+                            </span>
+                    </div>
+                   </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="show_part">
+            <p class="c">Cây Cà chua</p>
+            <div class="tomato">
+                <div class="left_p">
+                </div>
+                <div class="right_p">
+                   <div class="sc">
+                    <img id="sm_img" src="../img/c-dom-la.jpg">
+
+                    <div>
+                        <p class="d_name">Bệnh đốm lá</p>
+                
+                    <span class="mesure">Bệnh đốm lá là loại bệnh do vi khuẩn Septoria lycopersici gây ra.
+                        <br>
+                        Biện pháp phòng trừ:
+                        <br>
+                        Loại bỏ tất cả các lá bị nhiễm bệnh ngay khi bạn nhìn thấy chúng và sau đó phun các phần còn lại của cây bằng thuốc diệt nấm hữu cơ dựa trên đồng hoặc kali bicacbonat.
+                    </span>
+                    </div>
+                   </div>
+
+                  <div class="sc">
+                    <img id="sm_img" src="../img/benh-than-thu-ca-chua.jpg">
+
+                    <div>
+                        <p class="d_name">Bệnh thán thư</p>
+            
+                    <span class="mesure">Bệnh thán thư cây cà chua do nấm Colletotrichum phomoides gây ra. 
+                    Biện pháp phòng bệnh:
+                    <br>
+                        Chọn giống ít nhiễm bệnh, trồng thưa và làm giàn chống để tạo sự thoáng khí cho cây. Tưới nước nhỏ giọt nên rễ tránh tưới quá nhiều lên lá cây đồng thời nên thu hoạch cà chua đúng thời điểm tránh để quả quá chín dễ mắc bệnh. Thu gom tiêu hủy các quả bị bệnh tránh lây lan trên diện tích rộng.
+                        <br>
+                        Khi phát hiện bệnh mới chớm nên phun một trong các loại thuốc sau: hoạt chất Azoxystrobin như Amista; hoạt chất Metomenostrobin như Ringo-L 20SC hoặc phun một trong các loại thuốc sau: Amistar 250SC, Plant 50WP, Antracol 70WP, Polyram 80DF, Daconil 500SC,…. Theo hướng dẫn sử dụng trên bao bì.
+                    </span>
+                    </div>
+                  </div>
+
+                   <div class="sc">
+                    <img id="sm_img" src="../img/c-phan-trang.jpg">
+
+                        <div>
+                            <p class="d_name">Bệnh phấn trắng</p>
+                
+                            <span class="mesure">Bệnh phấn trắng là một bệnh nhiễm nấm có thể nhận biết ngay lập tức chính là lớp lá và thân cây bị mốc trắng bao phủ. 
+                            Biện pháp phòng trừ:
+                            <br>
+                            Nếu bạn phát hiện ra vấn đề sớm, hãy cắt bỏ và tiêu hủy tất cả các lá bị ảnh hưởng, sau đó phun cho cây hàng tuần với hỗn hợp một phần sữa với năm phần nước trong thời gian nấm mốc vẫn còn hoặc sử dụng thuốc xịt phòng ngừa bằng sulphur để điều trị.
+                            </span>
+                        </div>
+                   </div>
+
+                   <div class="sc">
+                    <img id="sm_img" src="../img/c-cuon-la.jpeg">
+
+                        <div>
+                            <p class="d_name">Bệnh cuốn lá</p>
+                
+                            <span class="mesure">Sâu cuốn lá cà chua, còn được gọi là bệnh xoăn lá là do nhiễm virus thường do rệp lây lan hoặc mang vào vườn của bạn thông qua cây con bị nhiễm bệnh. 
+                            <br>
+                            Biện pháp phòng trừ:
+                            <br>
+                            Cách chữa duy nhất là loại bỏ những cây bị nhiễm bệnh và xử lý chúng đúng cách. Tuy nhiên, hãy lưu ý rằng hiện tượng quăn lá tạm thời có thể xảy ra khi tưới nước không nhất quán, vì vậy hãy loại trừ nguyên nhân này trước khi thực hiện nhổ cây.
+                            </span>
+                        </div>
+                   </div>
+
+                   <div class="sc">
+                    <img id="sm_img" src="../img/c-ua-som.jpg">
+
+                        <div>
+                            <p class="d_name">Bệnh úa sớm</p>
+                
+                            <span class="mesure">Tác nhân gây bệnh
+                            Bệnh úa sớm trên cây cà chua còn được biết đến là bệnh đốm vòng, đây là loại bệnh thường xảy ra phổ biến trên cây cà chua do nấm Alternaria linariae là tác nhân gây ra.
+                            <br>
+                            Bệnh úa sớm có khả năng gây hại trên các loại cây thuộc họ cà như: cà chua, cà tím, ớt, khoai tây…
+                            <br>
+                            Khi gây hại, bệnh thường làm rụng lá của cây và từ đó làm giảm năng suất
+                            
+                            </span>
+                        </div>
+                   </div>
+
+                   <div class="sc">
+                    <img id="sm_img" src="../img/c-heo-ru.jpg">
+
+                    <div>
+                        <p class="d_name">Bệnh héo rũ</p>
+                
+                        <span class="mesure">
+                            
+                            Triệu chứng
+                            Khi mới xâm nhập và phát triển bệnh, cây cà chua sẽ xuất hiện biểu hiện như bị héo một phần hoặc héo cả cây.
+                            
+                            <br>
+                            Biện pháp quản lý<br>
+                            Tăng cường bón phân hữu cơ sinh học và các loại phân hữu cơ ủ hoai mục<br>
+                            Tạo rãnh thoát nước tốt cho vườn cà chua<br>
+                            Cải thiện pH đất bằng cách phun vôi định kỳ hoặc sử dụng bộ đôi Vermi Max + Ligno Max của Tanixa
+                        </span>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 1vw; height: 64px;"></div>
+
+    <script src="dictionary.js"></script>
 </body>
 </html>

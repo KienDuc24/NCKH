@@ -11,7 +11,7 @@
 
     <div class="main">
         <div class="main_img" id="mainimg">
-            <img src="../img/homepage/main.jpg" alt="" srcset="" id="main_img">
+            <img src="../img/bg_view.jpg" alt="" srcset="" id="main_img">
         </div>
     
         <div class="aboutus background_test part">
@@ -22,13 +22,13 @@
     
             <div class="partcontent abtuscontent">
                 <div class="abtusinto">
-                    <p>Đây là một dự án...</p>
+                    <p class="view">Dự án phát hiện bệnh lá cây sử dụng kỹ thuật học sâu đang là một phần không thể thiếu trong nghiên cứu và ứng dụng trong lĩnh vực nông nghiệp hiện đại. Bằng cách kết hợp giữa công nghệ hình ảnh và kỹ thuật học sâu, dự án nhằm mục đích phát hiện và chẩn đoán các bệnh tật trên lá cây một cách tự động và chính xác. Thay vì phụ thuộc vào việc kiểm tra thủ công từng cây trồng, việc sử dụng kỹ thuật học sâu cho phép tự động phân tích dữ liệu hình ảnh thu thập từ UAV hoặc máy ảnh được gắn trên một nền tảng di động, giúp tiết kiệm thời gian và công sức đồng thời tăng cường khả năng phát hiện sớm các dấu hiệu của bệnh tật. Dự án này hứa hẹn mang lại những tiến bộ đáng kể trong việc quản lý và bảo vệ sức khỏe của cây trồng, đồng thời đóng góp vào sự phát triển của nền nông nghiệp thông minh và bền vững. </p>
                     <button class="tolink" id="aboutus" onclick="hptoabtus()">Xem thêm</button>
                 </div>
 
                 <div class="abtuslogo">
-                    <img src="../img/homepage/logo.jpg" alt="" srcset="">
-                    <p>*Hình ảnh dự án*</p>
+                    <img src="../img/logo.png" alt="" srcset="">
+                    <!-- <p>*Hình ảnh dự án*</p> -->
                 </div>
             </div>
         </div>
@@ -51,55 +51,31 @@
                                     <div class="plantcontainer first_plant" id="plant1">
                                         <p class="plantname">Cây ngô</p>
                                             <ul class="description">
-                                                <li>Mô tả 1</li>
-                                                <li>Mô tả 2</li>
-                                                <li>Mô tả 3</li>
-                                                <li>Mô tả 4</li>
+                                                
+                                                <li>- Bệnh nám lá</li>
+                                                <li>- Bệnh gỉ sắt</li>
+                                                <li>- Bệnh khô vằn</li>
+                                                <li>- Bệnh thối thân</li>
+                                                <li>- Bệnh khô vằn</li>
+                                                <li>- Bệnh khảm ngô</li>
                                             </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="slide" id="slide2">
-                            <div class="dictimg">
-                                <div class="description_container">
-                                    <div class="plantcontainer first_plant" id="plant1">
-                                        <p class="plantname">Cây ổi</p>
-                                            <ul class="description">
-                                                <li>Mô tả 1</li>
-                                                <li>Mô tả 2</li>
-                                                <li>Mô tả 3</li>
-                                                <li>Mô tả 4</li>
-                                            </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide" id="slide3">
-                            <div class="dictimg">
-                                <div class="description_container">
-                                    <div class="plantcontainer first_plant" id="plant1">
-                                        <p class="plantname">Cây lúa</p>
-                                            <ul class="description">
-                                                <li>Mô tả 1</li>
-                                                <li>Mô tả 2</li>
-                                                <li>Mô tả 3</li>
-                                                <li>Mô tả 4</li>
-                                            </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="slide" id="slide4">
                             <div class="dictimg">
                                 <div class="description_container">
                                     <div class="plantcontainer first_plant" id="plant1">
                                         <p class="plantname">Cây cà chua</p>
                                             <ul class="description">
-                                                <li>Mô tả 1</li>
-                                                <li>Mô tả 2</li>
-                                                <li>Mô tả 3</li>
-                                                <li>Mô tả 4</li>
+                                                <li>- Bệnh đốm lá</li>
+                                                <li>- Bệnh thán thư</li>
+                                                <li>- Bệnh phấn trắng</li>
+                                                <li>- Bệnh cuốn lá</li>
+                                                <li>- Bệnh úa sớm</li>
+                                                <li>- Bệnh héo rũ</li>
                                             </ul>
                                     </div>
                                 </div>
@@ -111,8 +87,6 @@
                     </div>
                     <div class="dots">
                         <div class="dot active"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
                         <div class="dot"></div>
                     </div>
                 </div>
@@ -144,14 +118,14 @@
                             </svg>
                         </div>
                         <input type="file" required id="upload-file" name="uploaded-file">
-                        <p class="file-info">Chưa có file</p>
+                        <p class="file-info">Chưa có File</p>
                     </div>
                     <div class="dropzone-actions">
                         <button type="reset" class="upload">
-                            Cancel
+                            Xóa
                         </button>
                         <button id="submit-button" type="submit" class="upload">
-                            Save
+                            Dự đoán
                         </button>
                     </div>
                 </form>
@@ -302,7 +276,7 @@
         dropzoneBox.addEventListener("reset", (e) => {
         let dropzoneFileMessage = dropZoneElement.querySelector(".file-info");
 
-        dropzoneFileMessage.innerHTML = `No Files Selected`;
+        dropzoneFileMessage.innerHTML = `Chưa có File`;
         });
 
         dropzoneBox.addEventListener("submit", (e) => {

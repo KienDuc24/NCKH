@@ -155,3 +155,11 @@ img.img2{
 .lc2{
     border-bottom-left-radius: 32px;
 }
+
+.view{
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 20px;
+    line-height: 25px;
+}
+

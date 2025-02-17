@@ -151,6 +151,8 @@ button:not(#aboutus,.upload){
 
 .description li{
     list-style:none;
+    font-size: clamp(12px, 1.5vw, 18px);
+    margin-top: 5px;
 }
 
 .description_container {
@@ -171,7 +173,8 @@ button:not(#aboutus,.upload){
 .plantname{
     text-align: center;
     padding: 1vh;
-    font-size: large;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .dictimg > .description_container li,
@@ -195,6 +198,7 @@ button:not(#aboutus,.upload){
     overflow: hidden;
     width: 100%;
     height: 400px;
+    margin-bottom: 20px;
 }
 
 .slides {
@@ -218,15 +222,15 @@ button:not(#aboutus,.upload){
     background-image: url('../img/homepage/corn.jpg');
 }
 
-.slide:nth-child(2) {
+/* .slide:nth-child(2) {
     background-image: url('../img/homepage/guava.jpg');
 }
 
 .slide:nth-child(3) {
     background-image: url('../img/homepage/paddy.jpg');
-}
+} */
 
-.slide:nth-child(4) {
+.slide:nth-child(2) {
     background-image: url('../img/homepage/tomato.jpg');
 }
 
@@ -412,4 +416,12 @@ p.note{
 img{
     width: 20vw;
     margin: 0 auto;
+}
+
+.view{
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 30px;
 }
